@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما - قهوه لمیز</title>
+    <link rel="stylesheet" href="src/stylesheets/output.css">
+    <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden" dir="rtl">
+    <div class="w-full h-auto flex flex-wrap items-start justify-center">
+
+        <!-- header -->
+        <div class="w-full h-22.5 bg-black fixed top-0 flex flex-wrap justify-center items-center z-1">
+            <nav class="h-full w-full flex lg:container">
+                <div class="hamburger-menu h-full w-1/2 flex justify-start items-center lg:hidden">
+                    <i class="ri-menu-line text-white text-[24px] font-bold mr-10!"></i>
+                </div>
+
+                <div class="h-full w-1/2 lg:w-45">
+                    <a class="h-full w-full flex justify-end items-center" href="../index.html">
+                        <img class="w-18.25 h-18.25 ml-6! lg:ml-0! lg:mr-20!" src="../src/img/Lamiz-logo.webp" alt="">
+                    </a>
+                </div>
+
+                <ul
+                    class="hidden lg:flex flex-wrap items-center justify-start gap-6 flex-1 max-w-200 h-full *:w-auto *:h-auto **:text-white **:text-[14px] mr-10! **:hover:text-[#FF6E1F] **:duration-300 *:relative *:flex *:justify-center *:items-center">
+                    <li><a href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                    <li><a href="../menu page/menu.html">منو قهوه لمیز</a></li>
+                    <li class="group relative">
+                        <a href="">تماس با ما <span><i class="ri-arrow-down-s-fill text-white"></i></span></a>
+                        <ul
+                            class="opacity-0 w-38! h-0 group-hover:h-24 group-hover:opacity-100 absolute top-[120%] right-0 bg-amber-50 delay-300 duration-200! *:w-full *:h-1/2 *:flex *:justify-center *:items-center">
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../contact us page/contact.html">ارتباط با ما</a></li>
+                            <li class="group/li"><a class="w-full h-full text-[#FF6E1F]! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="#">درباره ما</a></li>
+                        </ul>
+                    </li>
+                    <li class="group relative">
+                        <a href="">سایر <span><i class="ri-arrow-down-s-fill text-white"></i></span></a>
+                        <ul
+                            class="opacity-0 w-38! h-0 group-hover:h-24 group-hover:opacity-100 absolute top-[120%] right-0 bg-amber-50 delay-300 duration-200! *:w-full *:h-1/2 *:flex *:justify-center *:items-center">
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../suggestion page/suggestion.html">انتقادات و پیشنهادات</a></li>
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../rules page/rules.html">قوانین و مقررات</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="h-full w-50 hidden lg:flex justify-end items-center">
+                    <div
+                        class="flex flex-wrap w-42.5 h-12.5 *:h-full *:w-1/3 *:flex *:justify-center *:items-center px-2!">
+                        <div>
+                            <a class="shopping-basket-btn w-full h-full flex justify-center items-center relative" href="">
+                                <i class="ri-shopping-cart-2-line text-[22px] text-white"></i>
+                                <span
+                                    class="bought-quantity w-4 h-4 rounded-full bg-[#FF6E1F] text-white text-[12px] absolute top-2 left-2 flex justify-center items-center">0</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-full h-full flex justify-center items-center" href="">
+                                <i class="ri-heart-line text-[22px] text-white"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-full h-full flex justify-center items-center" href="../login page/login.html">
+                                <i class="ri-user-3-line text-[22px] text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- header -->
+
+
+
+        <!-- toggle menu for mobile and tablet -->
+        <div class="cover hidden w-full h-full bg-[rgba(0,0,0,0.64)] fixed top-0 left-0 z-11 lg:hidden!"></div>
+        <div class="aside-menu h-full w-95 bg-[#212121] fixed right-[-110%] top-0 z-12 flex flex-wrap *:w-full *:flex duration-700 delay-300 lg:hidden opacity-0">
+                <div class="h-[15%] justify-center items-center">
+                    <div class="w-[70%] h-full flex items-center justify-end">
+                        <a class="h-[80%] w-53 flex justify-center items-center" href="../index.html">
+                            <img class="h-full mr-12!" src="../src/img/Lamiz-logo.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="close-aside-menu h-full w-[30%] flex justify-end items-start">
+                        <i class="ri-close-line text-[#FF6E1F] text-[36px] ml-5! mt-1! cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="h-[75%]">
+                    <ul class="w-full h-auto *:w-[93%] *:flex *:items-center **:text-[14px] pt-5! pr-5! *:hover:text-[#FF6E1F]">
+                        <li class="group h-10"><a class="text-white group-hover:text-[#FF6E1F]! duration-400" href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                        <li class="group h-10"><a class="text-white group-hover:text-[#FF6E1F]! duration-400" href="../menu page/menu.html">منو قهوه لمیز</a></li>
+
+                        <li class="contact-li h-10 group">
+                            <a class="contact-text text-white group-hover:text-[#FF6E1F]! duration-400" href="">تماس با ما</a>
+                            <span class="mr-1!"><i class="ri-arrow-down-s-fill text-white"></i></span>
+                        </li>
+
+                        <ul style="max-height: 0;" data-status="close" class="contact-submenu w-full overflow-hidden flex flex-wrap *:h-10 *:w-full *:flex *:items-center *:pr-3! duration-300">
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../contact us page/contact.html">ارتباط با ما</a>
+                            </li>
+                            <li class="group/li">
+                                <a class="text-[#FF6E1F] duration-400" href="#">درباره ما</a>
+                            </li>
+                        </ul>
+
+                        <li class="others-li h-10 group">
+                            <a class="others-text text-white group-hover:text-[#FF6E1F]! duration-400" href="">سایر</a>
+                            <span class="mr-1!"><i class="ri-arrow-down-s-fill text-white"></i></span>
+                        </li>
+
+                        <ul style="max-height: 0;" data-status="close" class="others-submenu w-full overflow-hidden flex flex-wrap *:h-10 *:w-full *:flex *:items-center *:pr-3! duration-300">
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../suggestion page/suggestion.html">انتقادات و پیشنهادات</a>
+                            </li>
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../rules page/rules.html">قوانین و مقررات</a>
+                            </li>
+                        </ul>
+
+                    </ul>
+                </div>
+                <div class="h-[10%] flex items-center justify-end">
+                    <div class="w-37.5 h-10 ml-15! flex">
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="shopping-basket-btn w-full h-full flex items-center justify-center" href="">
+                                <i class="ri-shopping-bag-fill text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="h-full w-full flex items-center justify-center" href="">
+                                <i class="ri-heart-line text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="h-full w-full flex items-center justify-center" href="../login page/login.html">
+                                <i class="ri-user-line text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- toggle menu for mobile and tablet -->
+
+
+        <!-- menu mobile -->
+        <div class="w-full h-[8vh] fixed right-0 bottom-0 z-10 flex justify-center items-center lg:hidden bg-white">
+            <ul
+                class="w-full h-full flex justify-center items-center *:h-full *:w-1/5 *:flex *:justify-center *:items-center">
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../index.html">
+                        <i class="ri-home-2-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../branches page/branches.html">
+                        <i class="ri-bank-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../menu page/menu.html">
+                        <i class="ri-store-2-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="shopping-basket-btn w-full h-full flex justify-center items-center relative" href="">
+                        <i
+                            class="ri-shopping-bag-line w-full h-full flex justify-center items-center text-[25px] text-[#333333] hover:text-[#33333399] duration-200">
+                            <span
+                                class="bought-quantity w-4 h-4 rounded-full bg-[#FF6E1F] text-white text-[9px] absolute top-[20%] left-[calc(50%-20px)] flex justify-center items-center">0</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../login page/login.html">
+                        <i class="ri-user-3-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- menu mobile -->
+
+
+        <!-- shopping basket -->
+        <div class="cover-basket hidden w-full h-full fixed top-0 left-0 z-14 bg-[rgba(0,0,0,0.64)] backdrop-blur-xs"></div>
+        <div class="shopping-basket h-full w-75 lg:w-85 fixed top-0 left-[-110%] z-15 bg-white duration-300">
+            <div class="w-full h-17 border-b border-b-[rgba(0,0,0,0.105)] flex justify-center items-center">
+
+                <div class="w-70 lg:w-75 h-7 flex items-center justify-center gap-x-3">
+
+                    <p class="h-full w-52 lg:w-55 text-[18px] text-[#242424] font-bold">سبد خرید</p>
+
+                    <div class="close-basket-btn h-full w-18 lg:w-20 flex items-center justify-center cursor-pointer">
+                        <div class="flex items-center justify-center">
+                            <i class="ri-close-line text-[#767676] text-[24px] flex items-center justify-center"></i>
+                        </div>
+                        <p class="h-full text-[#767676] text-[14px] flex items-center justify-center">بستن</p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="cart-section w-full h-[calc(100%-68px)] overflow-y-scroll">
+                
+            </div>
+
+        </div>
+        <!-- shopping basket -->
+
+        <!-- about bg -->
+        <div class="w-full h-55 mt-22.5! md:h-75 lg:h-87.5 bg-[url('../../../src/img/about-us-background.webp')] bg-cover bg-center bg-no-repeat">
+           <div class="w-full h-full flex flex-wrap justify-center bg-[#00000084] shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] *:w-full *:md:w-1/2 *:max-w-137.5 *:flex">
+
+
+            <div class="h-2/3! md:h-full! *:w-full! flex flex-wrap justify-center items-center ">
+               <div class="md:h-1/2 flex-wrap justify-center md:justify-start items-center *:w-full *:md:h-1/2 *:flex *:justify-center *:items-end md:pr-8! pt-3!">
+                   <p class="h-2/3 text-white font-bold text-[22px] md:text-[28px] md:items-end">ما قهوه لمیز هستیم</p>
+                   <br>
+                   <p class="h-1/3 text-[#FF6E1F] text-[10px] md:text-[14px] md:items-start md:pt-4!">بی نهایت عاشق کاری که انجام می‌دهیم</p>
+               </div>
+
+               <div class="w-[85%]! h-1/2 md:h-1/2 md:order-last justify-center items-center grid grid-cols-5 gap-4 *:flex *:flex-wrap *:justify-center *:items-center px-5! md:items-start">
+                   <div class="*:w-full *:h-1/2 *:flex *:justify-center *:items-center *:text-white">
+                      <span class="text-[11.2px]  md:text-[18.2px] font-bold">38+</span>
+                      <span class="text-[11.2px] font-bold">شعبه فعال</span>
+                   </div>
+                   <div class="*:w-full *:h-1/2 *:flex *:justify-center *:items-center *:text-white">
+                      <span class="text-[11.2px]  md:text-[18.2px] font-bold">26+</span>
+                      <span class="text-[11.2px] font-bold">شعبه اسنپ‌فود</span>
+                   </div>
+                   <div class="*:w-full *:h-1/2 *:flex *:justify-center *:items-center *:text-white">
+                      <span class="text-[11.2px]  md:text-[18.2px] font-bold">16+</span>
+                      <span class="text-[11.2px] font-bold">سال فعالیت </span>
+                   </div>
+                   <div class="*:w-full *:h-1/2 *:flex *:justify-center *:items-center *:text-white">
+                      <span class="text-[11.2px]  md:text-[18.2px] font-bold">70+</span>
+                      <span class="text-[11.2px] font-bold">نوشیدنی</span>
+                   </div>
+                   <div class="*:w-full *:h-1/2 *:flex *:justify-center *:items-center *:text-white">
+                      <span class="text-[11.2px]  md:text-[18.2px] font-bold">600+</span>
+                      <span class="text-[11.2px] font-bold">باریستا</span>
+                   </div>
+               </div>
+
+            </div>
+
+               <div class="h-1/3 md:h-full justify-center items-center md:flex-col md:items-end md:gap-x-0 md:gap-y-3 gap-x-3 *:hover:bg-[#8e6145] *:duration-200 *:h-7 *:w-7 *:md:h-9 *:md:w-9 **:flex **:justify-center **:items-center **:text-white **:text-[18px] **:md:text-[22px] *:bg-[#FF6E1A] *:rounded-full *:cursor-pointer md:pl-4!">
+                   <div>
+                       <i class="ri-instagram-line w-full h-full"></i>
+                   </div>
+                   <div>
+                       <i class="ri-linkedin-box-fill w-full h-full"></i>
+                   </div>
+               </div>
+           </div>
+       </div>
+        <!-- about bg -->
+         <!-- about page-->
+          <div class="w-full h-auto flex flex-col justify-center items-center  gap-10">
+            <div class="w-full max-w-285  md:justify-center h-auto flex flex-col md:flex-row items-center mt-5! gap-7 md:px-3!  lg:items-center">
+                <div class=" flex w-[80%]  flex-col justify-center items-center gap-2 md:gap-5 md:w-1/3 ">
+                    <div class=" flex justify-center items-center  text-[#8e6145]  text-[22px] md:text-[30px]">
+                        
+                        <i class="ri-thumb-up-line"></i>
+                    </div>
+                    <span class="text-[16.8px] font-bold">رضایت مشتری</span>
+                    <p class="text-[11.2px] md:text-[14px] text-[#212121] text-justify">در طول سالیان متمادی خدمت رسانی به مردم عزیز کشورمان، تا به امروز بیش از 99% رضایت مشتری را در سیستم های اطلاعاتی ثبت نمودیم.</p>
+                </div>
+
+                <div class="flex w-[80%] flex-col justify-center items-center gap-2 md:gap-5 md:w-1/3">
+                    <div class=" flex justify-center items-center  text-[#8e6145]  text-[22px] md:text-[30px]">
+                        <i class="ri-gift-2-fill  "></i>
+                    </div>
+                    <span class="text-[16.8px] font-bold">دریافت جایزه مشتری مداری </span>
+                    <p class="text-[11.2px] md:text-[14px] text-[#212121] text-justify">قهوه لمیز مفتخر است اعلام کند در بین 100 برند برتر، جایزه ویژه خدمات بهینه و تکریم از مشتری را در سال 1401 از طرف صنعت کارگزاری رسمی کشورمان دریافت نمودیم.</p>
+                </div>
+
+                <div class="flex w-[80%] flex-col justify-center items-center gap-2 md:gap-5 md:w-1/3">
+                    <div class=" flex justify-center items-center  text-[#8e6145]  text-[22px] md:text-[30px]">
+                        <i class="ri-map-pin-3-fill"></i>
+                    </div>
+                    <span class="text-[16.8px] font-bold">38 شعبه فعال</span>
+                    <p class="text-[11.2px] md:text-[14px] text-[#212121] text-justify">در حال حاضر با <strong class="text-[#212121]">38 شعبه فعال به همراه 26 شعبه اسنپ فود</strong> و بیش از 600 باریستا در خانواده‌مان در پُرترددترین نقاط شهر تهران و جاده‌های کشور با افتخار در خدمت عموم مردم ایران هستیم.</p>
+                </div>
+
+            </div>
+
+            <div class="w-full h-auto flex flex-col items-center justify-center gap-5 max-w-285 md:px-3! ">
+                <h2 class="flex justify-center text-[19.6px] md:text-[23.3px] font-bold">قهوه لمیز</h2>
+
+                <p class="  w-[90%] md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify">مجموعه زال ایرانیان ، پیشرو در صنعت قهوه و کافی‌شاپ با هدف فرهنگ‌سازی قهوه و قهوه‌نوشی در ایران در سال ۱۳۸۸ تاسیس شد. این شرکت، با ساختار عمودی بهترین دانه‌های قهوه را از مزارع سراسر دنیا تهیه کرده، در کارخانه رُست و فرآوری و سپس در مجموعه کافی‌شاپ‌های قهوه لمیز (زیر مجموعه‌ی زال ایرانیان) به دست مشتریان و عموم مردم ایران می رساند.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify ">قهوه لمیز درحال حاضر با <strong>38 شعبه فعال به همراه 26 شعبه اسنپ</strong> فود در سطح کشور بزرگ‌ترین مجموعه کافی‌شاپ زنجیره‌ای در ایران بوده و با افتخار به یک برند محبوب ملی و نامی آشنا تبدیل شده است.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify pb-4!">از سال 88 و با افتتاح شدن اولین شعبه قهوه لمیز در تجریش هدف ما واضح و روشن بوده و هست. هدف ما ارائه بهترین محصول با بهترین قیمت و با بهترین سرویس و جریان انرژی و حال خوب در این مرز و بوم است.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify pb-4!">در حال حاضر با <strong>38 شعبه فعال به همراه 26 شعبه اسنپ فود</strong> و بیش از 600 باریستا در خانواده‌مان در پُرترددترین نقاط شهر تهران و جاده‌های کشور با افتخار در خدمت عموم مردم ایران هستیم و جزئی از روزمره و خاطراتشان شده‌ایم.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify flex justify-center">ما با افتخار به ایرانی بودن برند قهوه لمیز و کسب و کارمان می‌بالیم و شب و روز و روز و شب، با عشق و دل و جان در تکاپوییم تا هر روز بهتر از دیروز در خدمت‌تان باشیم.</p>
+            </div>
+
+            <div class="w-full h-75  bg-[url('../../../src/img/branches-background.webp')] bg-auto bg-top bg-no-repeat">
+            <div class="w-full h-full flex flex-wrap justify-center items-center bg-[#000000aa] shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] *:w-full *:flex">
+             <div class="flex flex-col items-center gap-5 max-w-285 px-5! md:gap-10">
+                <h2 class="text-[19.6px] text-white font-bold md:text-[28px]" >قهوه لمیز نماینده‌ای ندارد و نمایندگی واگذار نمی‌کند</h2>
+                <p class=" w-full text-[11.2px] text-white text-justify md:text-[14px] ">تمام شعب قهوه لمیز در تهران و سایر استان‌ها انحصاری متعلق به شخص مدیرعامل گروه صعنتی زال ایرانیان می باشد و <span class="text-[#FF6E1A] text-[12.2px] underline">اعطای نمایندگی، واگذاری شعبه و حق امتیاز به اشخاص را نداریم</span>. تمامی شعب قهوه لمیز تحت نظر مجموعه، راه اندازی و مدیریت می شود.</p>
+             </div>
+            </div>    
+            </div>
+
+            <div class="w-full h-auto flex flex-col items-center justify-center gap-5 max-w-285 md:px-3! ">
+                <h2 class="flex justify-center text-[19.6px] md:text-[23.3px] font-bold">شکل‌گیری قهوه لمیز </h2>
+
+                <p class="  w-[90%] md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify">ایده و پایه‌ریزی قهوه لمیز با یک پایان‌نامه دانشگاهی شروع شد. آقای آرمین لمیع (مدیر‌عامل و موسس قهوه لمیز) ساکن و مقیم کانادا و نماینده کافی‌شاپ‌های زنجیره‌ای Blenz در حال تحصیل رشته MBA در دانشگاه Royal Roads بودند که موضوع تحقیق پایان‌نامه خود را (با همکاری دانشگاه شریف) درمورد “ایجاد فرهنگ قهوه و قهوه‌نوشی در جامعه‌ی چای نوش ایرانی” برنامه ریزی و به ثمر رساندند.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify ">تحقیق و تحلیل آکادمیک در این راستا بازار بکر و دست نخورده‌ی صنعت قهوه در ایران را بیش از پیش آشکار کرد و یک سال بعد قهوه لمیز با هدف فرهنگ‌سازی قهوه برای عموم مردم ایران در میدان تجریش (<a href="">شعبه سعدآباد</a>) آغاز به کار کرد.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify pb-4!">ارائه بهترین محصول با بهترین قیمت و بهترین سرویس در قابل دسترس‌ترین مناطق شهر از اصول اولیه و عوامل موفقیت قهوه لمیز بوده است.</p>
+
+                <p class="w-[90%]  md:w-full text-[11.2px] md:text-[14px] text-[#212121] text-justify ">کسی که می خواهد یک کارآفرین موفق باشد باید دارای چندین خصوصیت باشد. از جمله اینکه باید برای کارش یک برنامه ریزی خوب و بلندمدت داشته باشد.</p>
+            </div>
+
+            <div class="w-full h-95 md:h-110 lg:h-95 bg-[url('../../../src/img/branches-background.webp')] bg-auto bg-center bg-no-repeat">
+                <div class="w-full h-full flex flex-wrap justify-center items-center bg-[#000000aa] shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] *:w-full *:flex">
+                 <div class="flex flex-col items-center gap-9 max-w-285 px-5! md:gap-12">
+                    <h2 class="text-[19.6px] text-white font-bold md:text-[28px]" >اهداف ما</h2>
+                    <p class=" w-full text-[11.2px] text-white text-justify md:text-[14px] ">هدف ما نه تنها ارائه بهترین قهوه و محصول با بهترین قیمت و بهترین سرویس در قابل دسترس‌ترین نقاط شهر (و جاده‌ها) بوده و هست، بلکه انتقال انرژی خوب و بهتر‌کردن روز مشتریانمان، ایفای مسئولیت اجتماعی در راستای اصول و‌ ارزش‌هایمان و ایجاد اشتغال و محیط کاری سالم و قابل پیشرفت است.</p>
+                    <p class=" w-full text-[11.2px] text-white text-justify md:text-[14px] ">لمیز برندی است با ساختار عمودی، از قهوه سبز تا لیوان دست شما. بهترین دانه‌های قهوه با دقت و وسواس خاص به طور مستقیم از مزارع قهوه مناطق مختلف دنیا خریداری می‌شوند. نمونه قهوه‌های خریداری شده توسط گروه تحقیق و توسعه لمیز، مورد بررسی قرار میگیرند و متخصصین برشته کاری ما، دستورالعمل منحصر به فرد برشته کردن دانه‌ها را (بنا به نوع دانه) آماده می کنند.</p>
+                   <p class=" w-full text-[11.2px] text-white text-justify md:text-[14px] flex justify-center ">ما به کاری که می کنیم اعتقاد داریم و به تیم فوق‌العاده و در حال گسترشمان می‌بالیم و همیشه مشتاق به جذب نیروهای پر انگیزه، پر تلاش و مسئول هستیم.</p>
+
+                 </div>
+                </div>    
+                </div>
+          </div>
+           <!-- about page-->
+
+        <!-- branch section -->
+        <div class="flex flex-wrap justify-center w-full max-w-285 h-auto ">
+
+            <div class="w-full h-auto flex flex-wrap justify-center *:w-[85%] md:*:w-[95%] *:h-auto *:text-[11.2px] *:md:text-[14px] *:flex *:justify-center *:items-center *:text-justify pt-7!">
+                <h2 class="text-[19.6px]! md:text-[23.3px]! font-bold">شعب قهوه لمیز</h2>
+                <p class="pt-7!">مجموعه قهوه لمیز با بیش از 38 شعبه فعال به همراه 26 شعبه اسنپ فود بزرگترین مجموعه قهوه‌ ایران است. با بزرگ‌تر و بیشترشدن تعداد شعبه‌های قهوه لمیز، اهمیت پایبند ماندن به اصول و ارزش‌ها و فرهنگ کاری ما در این تیم بیشتر و مهم‌تر شده است.</p>
+                <p class="pt-10!">به عنوان بزرگ‌ترین مجموعه قهوه در ایران با بیش از 38 شعبه فعال به همراه 26 شعبه اسنپ فود در تهران و شهرستان پایبند بودن به بالاترین استاندارهای کاری و اخلاقی از الزامات ماست. این استاندارد، راهنمای عملکرد کلی و تصمیم‌گیری‌های روزمره ما می‌باشد. همچنین از مهم‌ترین اهداف ما در مجموعه قهوه لمیز ارائه بهترین محصول با بهترین قیمت و با بهترین سرویس و جریان انرژی و حال خوب در این مرز و بوم است. مجموعه قهوه لمیز در نظر دارد با هدف فرهنگ‌سازی و ترویج نوشیدن قهوه در جامعه سبک زندگی درست را آموزش دهد و در این راستا برنامه و اقدامات ارزشمندی را در نظر گرفته است.</p>
+            </div>
+
+            <div class="w-[82%] md:w-[95%] lg:w-[97%] max-w-275 h-auto flex justify-center items-center py-7!">
+            <div class="w-full h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 *:rounded-md *:overflow-hidden">
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Tajrish-Monin.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه تجریش</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Royan-Branches-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه رویان</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Mirdamad.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه میرداماد</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-4rahvaliasr.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه چهارراه ولیعصر</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/FATEMI-COVER.jpg" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه فاطمی</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-qom.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه مهروماه</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Vanak-Branches-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه ونک</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Pasdaran.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه پاسداران</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Farmanieh.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه فرمانیه</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Bagh-Ferdos.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه باغ فردوس</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Esfehan.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه اصفهان</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Jordan.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه جردن (گلخانه)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/saatdat-abad-cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه سعادت آباد</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Paydar-Fard.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه پایدارفرد</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Shahrak-e-Gharb.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه شهرک غرب (مهستان)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Pol-Romi.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه پل رومی</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Kish.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه کیش (میکامال)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Motahari-Branches-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه مطهری</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Motel-Ghoo-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه متل قو</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Lavasan-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه لواسان</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Cover-Izadshahr.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه ایزدشهر</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/karaj-branches-cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه کرج (عظیمیه)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Yosef-Abad-Cover-Branches.jpg" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه یوسف آباد</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Enghelab-Branches-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه انقلاب</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Iranmal-Covers.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه ایران‌مال</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Heravi-Branches-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه هروی</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Fakhar-Moghadam-Branches.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه فخارمقدم</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Gisha-Cover-Branche.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه گیشا</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Modireat-bridge-Covers.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه پل مدیریت</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Jam-Cover-Branch.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه جم</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Mehrshahr.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه کرج (مهرشهر)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Babolsar-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه بابلسر</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Golestan-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه شهرک غرب (گلستان)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Argentina.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه آرژانتین</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Kish-Telecabin-Cover.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه کیش (تله‌کابین)</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Shiraz-Cover-Branch.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه شیراز</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Blvd-Ferdows-Covers.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه بلوار فردوس</figcaption>
+                    </a>
+                </div>
+
+                <div class="aspect-square">
+                    <a class="w-full h-full flex justify-center items-center relative" href="">
+                        <img class="w-full h-full flex justify-center items-center" src="../src/img/Jordan-Atefi-Sharghi.webp" alt="">
+                        <figcaption class="absolute top-[90%] md:top-[80%] xl:top-[85%] text-[11px] md:text-[15px] text-white">شعبه جردن (عاطفی‌شرقی)</figcaption>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        <!-- branch section -->
+
+        <!-- footer -->
+        <div class="w-full h-145 md:h-78 flex flex-wrap justify-center xl:gap-x-12 bg-black mb-15! lg:mb-0!">
+
+            <!-- logo -->
+            <div class="w-full h-[18%] md:h-4/5 md:w-1/4 max-w-63.5 flex justify-center items-center lg:items-start lg:pt-7!">
+                <a class="h-20" href="../index.html">
+                    <img class="w-full h-full" src="../src/img/Lamiz-logo.webp" alt="">
+                </a>
+            </div>
+            <!-- logo -->
+
+            <!-- ul -->
+            <div class="w-full h-[36%] md:h-4/5 md:w-2/4 max-w-127 flex *:pt-5! md:pt-0!">
+                
+                <div class="h-full w-1/2">
+                    <div class="w-full h-1/5 flex justify-center lg:justify-start items-center text-[16px] font-bold text-white lg:mb-3!">دسترسی سریع</div>
+                    <div class="w-full h-4/5">
+                        <ul class="w-full h-auto *:w-[60%] *:h-7 pr-3! *:pr-5! lg:*:pr-0! lg:pr-0!">
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../menu page/menu.html">منو قهوه لمیز</a></li>
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="h-full w-1/2">
+                    <div class="w-full h-1/5 flex justify-center lg:justify-start items-center text-[16px] font-bold text-white lg:mb-3!">منوی قهوه لمیز</div>
+                    <div class="w-full h-4/5">
+                        <ul class="w-full h-auto *:w-[60%] *:h-7 pr-3! *:pr-5! lg:*:pr-0! lg:pr-0!">
+                            <li class="bg-gray-600 lg:bg-black lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:text-[#FF6E1F] duration-300" href="#">درباره ما</a></li>
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../contact us page/contact.html">ارتباط با ما</a></li>
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../rules page/rules.html">قوانین و مقررات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- ul -->
+
+            <!-- permission -->
+            <div class="w-full h-[36%] md:h-4/6 md:w-1/4 max-w-63.5 md:mt-5! pb-2!">
+
+                <div class="w-full h-[20%] flex justify-center items-center font-bold text-white text-[14px]">مجوزهای قهوه لمیز</div>
+
+                <div class="w-full h-[60%] flex justify-center items-center">
+                    <img class="w-20 cursor-pointer" src="../src/img/logo.png" alt="">
+                </div>
+
+                <div class="w-full h-[20%] flex justify-center items-center gap-x-1 *:border *:border-white *:rounded-full">
+
+                    <div class="w-6 h-6 flex justify-center items-center">
+                        <i class="ri-instagram-line h-full w-full flex justify-center items-center text-[14px] text-white"></i>
+                    </div>
+
+                    <div class="w-6 h-6 flex justify-center items-center">
+                        <i class="ri-linkedin-box-fill h-full w-full flex justify-center items-center text-[14px] text-white"></i>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- permission -->
+            
+            <!-- rights -->
+            <div class="w-full h-[10%] md:h-1/5 flex justify-center items-center text-[12px] text-white border-t border-t-gray-500">طراحی شده با 🧡 توسط یاسین ترک زبان</div>
+            <!-- rights -->
+
+        </div>
+        <!-- footer -->
+
+        <!-- circle to go to top of page -->
+        <div class="go-to-start w-10 h-10 lg:w-13 lg:h-13 flex justify-center items-center rounded-full bg-[#FFFFFFE6] fixed top-[85%] lg:top-[90%] left-[-210%] z-100 duration-400 transition-all ease-in-out opacity-0">
+            <a class="w-full h-full flex justify-center items-center" href="#">
+                <i class="ri-arrow-up-s-line text-[26px] lg:text-[30px] text-gray-700 hover:text-gray-500 duration-200"></i>
+            </a>
+        </div>
+        <!-- circle to go to top of page -->
+        
+    </div>
+</body>
+
+</html>
+<script src="../src/js/master.js"></script>

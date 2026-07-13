@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منو قهوه لمیز</title>
+    <link rel="stylesheet" href="src/stylesheets/output.css">
+    <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            scroll-behavior: smooth;
+        }
+        .active-menu{
+            border-right: 2px solid #ff6e1f;
+        }
+        .active-p{
+            color: #ff6e1f;
+        }
+        .show{
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden" dir="rtl">
+    <div class="w-full h-auto flex flex-wrap items-start justify-center">
+
+        <!-- header -->
+        <div class="w-full h-22.5 bg-black fixed top-0 flex flex-wrap justify-center items-center z-5">
+            <nav class="h-full w-full flex lg:container">
+                <div class="hamburger-menu h-full w-1/2 flex justify-start items-center lg:hidden">
+                    <i class="ri-menu-line text-white text-[24px] font-bold mr-10!"></i>
+                </div>
+
+                <div class="h-full w-1/2 lg:w-45">
+                    <a class="h-full w-full flex justify-end items-center" href="../index.html">
+                        <img class="w-18.25 h-18.25 ml-6! lg:ml-0! lg:mr-20!" src="../src/img/Lamiz-logo.webp" alt="">
+                    </a>
+                </div>
+
+                <ul
+                    class="hidden lg:flex flex-wrap items-center justify-start gap-6 flex-1 max-w-200 h-full *:w-auto *:h-auto **:text-white **:text-[14px] mr-10! **:hover:text-[#FF6E1F] **:duration-300 *:relative *:flex *:justify-center *:items-center">
+                    <li><a href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                    <li><a class="text-[#FF6E1F]!" href="#">منو قهوه لمیز</a></li>
+                    <li class="group relative">
+                        <a href="">تماس با ما <span><i class="ri-arrow-down-s-fill text-white"></i></span></a>
+                        <ul
+                            class="opacity-0 w-38! h-0 group-hover:h-24 group-hover:opacity-100 absolute top-[120%] right-0 bg-amber-50 delay-300 duration-200! *:w-full *:h-1/2 *:flex *:justify-center *:items-center">
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../contact us page/contact.html">ارتباط با ما</a></li>
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../about page/about.html">درباره ما</a></li>
+                        </ul>
+                    </li>
+                    <li class="group relative">
+                        <a href="">سایر <span><i class="ri-arrow-down-s-fill text-white"></i></span></a>
+                        <ul
+                            class="opacity-0 w-38! h-0 group-hover:h-24 group-hover:opacity-100 absolute top-[120%] right-0 bg-amber-50 delay-300 duration-200! *:w-full *:h-1/2 *:flex *:justify-center *:items-center">
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../suggestion page/suggestion.html">انتقادات و پیشنهادات</a></li>
+                            <li class="group/li"><a class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                    href="../rules page/rules.html">قوانین و مقررات</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="h-full w-50 hidden lg:flex justify-end items-center">
+                    <div
+                        class="flex flex-wrap w-42.5 h-12.5 *:h-full *:w-1/3 *:flex *:justify-center *:items-center px-2!">
+                        <div>
+                            <a class="shopping-basket-btn w-full h-full flex justify-center items-center relative" href="">
+                                <i class="ri-shopping-cart-2-line text-[22px] text-white"></i>
+                                <span
+                                    class="bought-quantity w-4 h-4 rounded-full bg-[#FF6E1F] text-white text-[12px] absolute top-2 left-2 flex justify-center items-center">0</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-full h-full flex justify-center items-center" href="">
+                                <i class="ri-heart-line text-[22px] text-white"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="w-full h-full flex justify-center items-center" href="../login page/login.html">
+                                <i class="ri-user-3-line text-[22px] text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- header -->
+
+
+
+        <!-- toggle menu for mobile and tablet -->
+        <div class="cover hidden w-full h-full bg-[rgba(0,0,0,0.64)] fixed top-0 left-0 z-11 lg:hidden!"></div>
+        <div class="aside-menu h-full w-95 bg-[#212121] fixed right-[-110%] top-0 z-12 flex flex-wrap *:w-full *:flex duration-700 delay-300 lg:hidden opacity-0">
+                <div class="h-[15%] justify-center items-center">
+                    <div class="w-[70%] h-full flex items-center justify-end">
+                        <a class="h-[80%] w-53 flex justify-center items-center" href="../index.html">
+                            <img class="h-full mr-12!" src="../src/img/Lamiz-logo.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="close-aside-menu h-full w-[30%] flex justify-end items-start">
+                        <i class="ri-close-line text-[#FF6E1F] text-[36px] ml-5! mt-1! cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="h-[75%]">
+                    <ul class="w-full h-auto *:w-[93%] *:flex *:items-center **:text-[14px] pt-5! pr-5! *:hover:text-[#FF6E1F]">
+                        <li class="group h-10"><a class="text-white group-hover:text-[#FF6E1F]! duration-400" href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                        <li class="group h-10"><a class="text-[#FF6E1F] duration-400" href="#">منو قهوه لمیز</a></li>
+
+                        <li class="contact-li h-10 group">
+                            <a class="contact-text text-white group-hover:text-[#FF6E1F]! duration-400" href="">تماس با ما</a>
+                            <span class="mr-1!"><i class="ri-arrow-down-s-fill text-white"></i></span>
+                        </li>
+
+                        <ul style="max-height: 0;" data-status="close" class="contact-submenu w-full overflow-hidden flex flex-wrap *:h-10 *:w-full *:flex *:items-center *:pr-3! duration-300">
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../contact us page/contact.html">ارتباط با ما</a>
+                            </li>
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../about page/about.html">درباره ما</a>
+                            </li>
+                        </ul>
+
+                        <li class="others-li h-10 group">
+                            <a class="others-text text-white group-hover:text-[#FF6E1F]! duration-400" href="">سایر</a>
+                            <span class="mr-1!"><i class="ri-arrow-down-s-fill text-white"></i></span>
+                        </li>
+
+                        <ul style="max-height: 0;" data-status="close" class="others-submenu w-full overflow-hidden flex flex-wrap *:h-10 *:w-full *:flex *:items-center *:pr-3! duration-300">
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../suggestion page/suggestion.html">انتقادات و پیشنهادات</a>
+                            </li>
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../rules page/rules.html">قوانین و مقررات</a>
+                            </li>
+                        </ul>
+
+                    </ul>
+                </div>
+                <div class="h-[10%] flex items-center justify-end">
+                    <div class="w-37.5 h-10 ml-15! flex">
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="shopping-basket-btn w-full h-full flex items-center justify-center" href="">
+                                <i class="ri-shopping-bag-fill text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="h-full w-full flex items-center justify-center" href="">
+                                <i class="ri-heart-line text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="h-full w-full flex items-center justify-center" href="../login page/login.html">
+                                <i class="ri-user-line text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- toggle menu for mobile and tablet -->
+
+
+        <!-- menu mobile -->
+        <div class="w-full h-[8vh] fixed right-0 bottom-0 z-10 flex justify-center items-center lg:hidden bg-white">
+            <ul
+                class="w-full h-full flex justify-center items-center *:h-full *:w-1/5 *:flex *:justify-center *:items-center">
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../index.html">
+                        <i class="ri-home-2-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../branches page/branches.html">
+                        <i class="ri-bank-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="#">
+                        <i class="ri-store-2-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="shopping-basket-btn w-full h-full flex justify-center items-center relative" href="">
+                        <i
+                            class="ri-shopping-bag-line w-full h-full flex justify-center items-center text-[25px] text-[#333333] hover:text-[#33333399] duration-200">
+                            <span
+                                class="bought-quantity w-4 h-4 rounded-full bg-[#FF6E1F] text-white text-[9px] absolute top-[20%] left-[calc(50%-20px)] flex justify-center items-center">0</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="w-full h-full flex justify-center items-center" href="../login page/login.html">
+                        <i class="ri-user-3-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- menu mobile -->
+
+
+        <!-- shopping basket -->
+        <div class="cover-basket hidden w-full h-full fixed top-0 left-0 z-14 bg-[rgba(0,0,0,0.64)] backdrop-blur-xs"></div>
+        <div class="shopping-basket h-full w-75 lg:w-85 fixed top-0 left-[-110%] z-15 bg-white duration-300">
+            <div class="w-full h-17 border-b border-b-[rgba(0,0,0,0.105)] flex justify-center items-center">
+
+                <div class="w-70 lg:w-75 h-7 flex items-center justify-center gap-x-3">
+
+                    <p class="h-full w-52 lg:w-55 text-[18px] text-[#242424] font-bold">سبد خرید</p>
+
+                    <div class="close-basket-btn h-full w-18 lg:w-20 flex items-center justify-center cursor-pointer">
+                        <div class="flex items-center justify-center">
+                            <i class="ri-close-line text-[#767676] text-[24px] flex items-center justify-center"></i>
+                        </div>
+                        <p class="h-full text-[#767676] text-[14px] flex items-center justify-center">بستن</p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="cart-section w-full h-[calc(100%-68px)] overflow-y-scroll">
+                
+            </div>
+
+        </div>
+        <!-- shopping basket -->
+
+        <!-- header -->
+        <div class="w-full h-37.5 md:h-75 lg:h-87.5 mt-22.5! bg-[url('../../../src/img/mneu-background-e1727098488921.webp')] bg-cover bg-center xl:bg-top bg-no-repeat">
+            <div class="w-full h-full flex flex-wrap justify-center bg-[#00000084] shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] md:shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] *:w-full *:h-1/2 *:md:h-full *:md:w-1/2 *:max-w-137.5 *:flex">
+                <div class="flex-wrap justify-center md:justify-start items-center md:pr-4! pt-4!">
+                    <div class="w-full h-full md:h-1/3 flex flex-wrap *:w-full *:h-10 *:text-center *:md:text-start">
+                        <p class="text-white font-bold text-[22px] md:text-[28px]">منو قهوه لمیز</p>
+                        <p class="text-[#FF6E1F] text-[13px] md:text-[15px]">سرو در همه شعبه‌های قهوه لمیز</p>
+                    </div>
+                </div>
+                <div class="justify-center items-center md:flex-col md:items-end md:gap-x-0 md:gap-y-3 gap-x-3 *:hover:bg-[#8e6145] *:duration-200 *:h-7 *:w-7 *:md:h-9 *:md:w-9 **:flex **:justify-center **:items-center **:text-white **:text-[18px] **:md:text-[22px] *:bg-[#FF6E1F] *:rounded-full *:cursor-pointer md:pl-4!">
+                    <div>
+                        <i class="ri-instagram-line w-full h-full"></i>
+                    </div>
+                    <div>
+                        <i class="ri-linkedin-box-fill w-full h-full"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <!-- menu -->
+        <div class="w-full h-auto min-h-100 flex justify-center items-center py-10!">
+            <div class="h-auto min-h-100 w-[95%] flex justify-center bg-[#F0F0F0] rounded-2xl overflow-hidden">
+                <div class="h-full w-30 flex flex-wrap items-start gap-y-3 pt-3!">
+                    <div class="menu active-menu w-full h-17 md:h-24 flex flex-wrap justify-center items-center group border-2 border-[#00000000] hover:border-r-[#FF6E1F] py-2!">
+                        <img class="w-1/3 md:w-1/2" src="src/img/HOT-CHOCOLATE_-LAMIZ.webp" alt="">
+                        <p class="active-p w-full text-center text-[9px] md:text-[11px] text-[#555555] group-hover:text-[#FF6E1F]">نوشیدنی گرم</p>
+                    </div>
+                    <div class="menu w-full h-17 md:h-24 flex flex-wrap justify-center items-center group border-2 border-[#00000000] hover:border-r-[#FF6E1F] py-2!">
+                        <img class="w-1/3 md:w-1/2" src="src/img/ICED-CARAMEL-MACCHIATO-LAMIZ.webp" alt="">
+                        <p class="w-full text-center text-[9px] md:text-[11px] text-[#555555] group-hover:text-[#FF6E1F]">نوشیدنی سرد</p>
+                    </div>
+                    <div class="menu w-full h-17 md:h-24 flex flex-wrap justify-center items-center group border-2 border-[#00000000] hover:border-r-[#FF6E1F] py-2!">
+                        <img class="w-1/3 md:w-1/2" src="src/img/Avocado-With-Chili-Croissant-Lamiz.webp" alt="">
+                        <p class="w-full text-center text-[9px] md:text-[11px] text-[#555555] group-hover:text-[#FF6E1F]">ساندویچ کراسان</p>
+                    </div>
+                    <div class="menu w-full h-17 md:h-24 flex flex-wrap justify-center items-center group border-2 border-[#00000000] hover:border-r-[#FF6E1F] py-2!">
+                        <img class="w-1/3 md:w-1/2" src="src/img/CARROT-CAKE-LAMIZ.webp" alt="">
+                        <p class="w-full text-center text-[9px] md:text-[11px] text-[#555555] group-hover:text-[#FF6E1F]">کیک‌ها</p>
+                    </div>
+                    <div class="menu w-full h-17 md:h-24 flex flex-wrap justify-center items-center group border-2 border-[#00000000] hover:border-r-[#FF6E1F] py-2!">
+                        <img class="w-1/3 md:w-1/2" src="src/img/OXTONGUE-LAMIZ.webp" alt="">
+                        <p class="w-full text-center text-[9px] md:text-[11px] text-[#555555] group-hover:text-[#FF6E1F]">چای و دمنوش</p>
+                    </div>
+                    <div class="w-full h-[calc(100%-340px)]"></div>
+                </div>
+                <div class="min-h-100 h-auto flex-1 border-r border-dashed border-r-[#555555] *:grid *:grid-cols-1 *:md:grid-cols-2 *:lg:grid-cols-4 *:lg:gap-3 *:lg:gap-x-0">
+                    <div class="category warm-bar h-auto w-full">
+                    </div>
+                    <div class="category show cold-bar h-full w-full"></div>
+                    <div class="category show sandwich h-full w-full"></div>
+                    <div class="category show cake h-full w-full"></div>
+                    <div class="category show tea h-full w-full"></div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+
+        <!-- footer -->
+        <div class="w-full h-145 md:h-78 flex flex-wrap justify-center xl:gap-x-12 bg-black mb-15! lg:mb-0!">
+
+            <!-- logo -->
+            <div class="w-full h-[18%] md:h-4/5 md:w-1/4 max-w-63.5 flex justify-center items-center lg:items-start lg:pt-7!">
+                <a class="h-20" href="../index.html">
+                    <img class="w-full h-full" src="../src/img/Lamiz-logo.webp" alt="">
+                </a>
+            </div>
+            <!-- logo -->
+
+            <!-- ul -->
+            <div class="w-full h-[36%] md:h-4/5 md:w-2/4 max-w-127 flex *:pt-5! md:pt-0!">
+                
+                <div class="h-full w-1/2">
+                    <div class="w-full h-1/5 flex justify-center lg:justify-start items-center text-[16px] font-bold text-white lg:mb-3!">دسترسی سریع</div>
+                    <div class="w-full h-4/5">
+                        <ul class="w-full h-auto *:w-[60%] *:h-7 pr-3! *:pr-5! lg:*:pr-0! lg:pr-0!">
+                            <li class="bg-gray-600 lg:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:text-[#FF6E1F] duration-300" href="#">منو قهوه لمیز</a></li>
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="h-full w-1/2">
+                    <div class="w-full h-1/5 flex justify-center lg:justify-start items-center text-[16px] font-bold text-white lg:mb-3!">منوی قهوه لمیز</div>
+                    <div class="w-full h-4/5">
+                        <ul class="w-full h-auto *:w-[60%] *:h-7 pr-3! *:pr-5! lg:*:pr-0! lg:pr-0!">
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../about page/about.html">درباره ما</a></li>
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../contact us page/contact.html">ارتباط با ما</a></li>
+                            <li class="hover:bg-gray-600 lg:hover:bg-black duration-200"><a class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300" href="../rules page/rules.html">قوانین و مقررات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- ul -->
+
+            <!-- permission -->
+            <div class="w-full h-[36%] md:h-4/6 md:w-1/4 max-w-63.5 md:mt-5! pb-2!">
+
+                <div class="w-full h-[20%] flex justify-center items-center font-bold text-white text-[14px]">مجوزهای قهوه لمیز</div>
+
+                <div class="w-full h-[60%] flex justify-center items-center">
+                    <img class="w-20 cursor-pointer" src="../src/img/logo.png" alt="">
+                </div>
+
+                <div class="w-full h-[20%] flex justify-center items-center gap-x-1 *:border *:border-white *:rounded-full">
+
+                    <div class="w-6 h-6 flex justify-center items-center">
+                        <i class="ri-instagram-line h-full w-full flex justify-center items-center text-[14px] text-white"></i>
+                    </div>
+
+                    <div class="w-6 h-6 flex justify-center items-center">
+                        <i class="ri-linkedin-box-fill h-full w-full flex justify-center items-center text-[14px] text-white"></i>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- permission -->
+            
+            <!-- rights -->
+            <div class="w-full h-[10%] md:h-1/5 flex justify-center items-center text-[12px] text-white border-t border-t-gray-500">طراحی شده با 🧡 توسط یاسین ترک زبان</div>
+            <!-- rights -->
+
+        </div>
+        <!-- footer -->
+
+        <!-- circle to go to top of page -->
+        <div class="go-to-start w-10 h-10 lg:w-13 lg:h-13 flex justify-center items-center rounded-full bg-[#FFFFFFE6] fixed top-[85%] lg:top-[90%] left-[-210%] z-100 duration-400 transition-all ease-in-out opacity-0">
+            <a class="w-full h-full flex justify-center items-center" href="#">
+                <i class="ri-arrow-up-s-line text-[26px] lg:text-[30px] text-gray-700 hover:text-gray-500 duration-200"></i>
+            </a>
+        </div>
+        <!-- circle to go to top of page -->
+        
+    </div>
+
+</body>
+
+</html>
+<script src="../src/js/master.js"></script>
+<script src="src/js/menu.js"></script>
+<script>
+    const menus = document.querySelectorAll('.menu')
+    const categorys = document.querySelectorAll('.category')
+
+    menus.forEach((val , i) => {
+        val.addEventListener('click' , (e) => {
+            menus.forEach(element => {
+                element.classList.remove('active-menu')
+                element.children[1].classList.remove('active-p')
+            })
+            categorys.forEach(element => {
+                element.classList.add('show')
+            })
+            val.classList.add('active-menu')
+            val.children[1].classList.add('active-p')
+            categorys[i].classList.remove('show')
+        })
+    });
+</script>

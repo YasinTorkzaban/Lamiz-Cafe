@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ارتباط با ما - قهوه لمیز</title>
+        <link rel="stylesheet" href="src/stylesheets/output.css" />
+        <link rel="stylesheet" href="node_modules/remixicon/fonts/remixicon.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                overflow-x: hidden;
+                background-color: #f0f0f0 !important;
+                scroll-behavior: smooth;
+            }
+            .page-bg {
+                background-color: #f0f0f0 !important;
+            }
+            .mug-img {
+                width: 220px !important;
+                height: auto !important;
+            }
+            @media (min-width: 1024px) {
+                .mug-img {
+                    width: 300px !important;
+                }
+            }
+            .info-stack {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 2.5rem !important;
+                margin-bottom: 0 !important;
+            }
+            .info-wrap {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .contact-details-grid {
+                padding-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            @media (min-width: 1024px) {
+                .contact-details-grid {
+                    display: grid !important;
+                    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                    gap: 1.5rem !important;
+                }
+            }
+            .contact-item {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            .contact-item i {
+                margin-bottom: 1rem !important;
+            }
+            .contact-item h3 {
+                margin-bottom: 1rem !important;
+            }
+            .partners-section {
+                padding-top: 0.5rem !important;
+            }
+            .partners-grid {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 3rem !important;
+            }
+            .partner-logo {
+                height: 100px !important;
+                width: auto !important;
+                object-fit: contain !important;
+            }
+
+            .contact-grid {
+                display: grid !important;
+                gap: 3rem !important;
+                align-items: center !important;
+                margin-bottom: 3rem !important;
+            }
+            @media (max-width: 1023px) {
+                .contact-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .form-wrapper {
+                    order: 2 !important;
+                }
+                .info-wrapper {
+                    order: 1 !important;
+                }
+            }
+            @media (min-width: 1024px) {
+                .contact-grid {
+                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+                }
+                .form-wrapper {
+                    order: 1 !important;
+                }
+                .info-wrapper {
+                    order: 2 !important;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="overflow-x-hidden" dir="rtl" style="padding-top: 90px">
+        <div class="w-full h-auto justify-center">
+            <!-- header -->
+            <div
+                class="w-full h-22.5 bg-black fixed top-0 z-10 flex flex-wrap justify-center items-start"
+            >
+                <nav class="h-full w-full flex lg:container">
+                    <div class="hamburger-menu h-full w-1/2 flex justify-start items-center lg:hidden">
+                        <i class="ri-menu-line text-white text-[24px] font-bold mr-10!"></i>
+                    </div>
+
+                    <div class="h-full w-1/2 lg:w-45">
+                        <a class="h-full w-full flex justify-end items-center" href="../index.html">
+                            <img
+                                class="w-18.25 h-18.25 ml-6! lg:ml-0! lg:mr-20!"
+                                src="src/img/Lamiz-logo.webp"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+
+                    <ul
+                        class="hidden lg:flex flex-wrap items-center justify-start gap-6 flex-1 max-w-200 h-full *:w-auto *:h-auto **:text-white **:text-[14px] mr-10! **:hover:text-[#FF6E1F] **:duration-300 *:relative *:flex *:justify-center *:items-center"
+                    >
+                        <li><a href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                        <li><a href="../menu page/menu.html">منو قهوه لمیز</a></li>
+                        <li class="group relative">
+                            <a href=""
+                                >تماس با ما <span><i class="ri-arrow-down-s-fill text-white"></i></span
+                            ></a>
+                            <ul
+                                class="opacity-0 w-38! h-0 group-hover:h-24! group-hover:opacity-100 absolute top-[120%] right-0 bg-amber-50 delay-300 duration-200! *:w-full *:h-1/2 *:flex *:justify-center *:items-center"
+                            >
+                                <li class="group/li">
+                                    <a style="color: #ff6e1f"
+                                        class="w-full h-full text-[#FF6E1F]! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                        href="#"
+                                        >ارتباط با ما</a
+                                    >
+                                </li>
+                                <li class="group/li">
+                                    <a
+                                        class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                        href="../about page/about.html"
+                                        >درباره ما</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="group relative">
+                            <a href=""
+                                >سایر <span><i class="ri-arrow-down-s-fill text-white"></i></span
+                            ></a>
+                            <ul
+                                class="opacity-0 w-38! h-0 group-hover:h-24! group-hover:opacity-100 absolute top-[120%] right-0 bg-amber-50 delay-300 duration-200! *:w-full *:h-1/2 *:flex *:justify-center *:items-center"
+                            >
+                                <li class="group/li">
+                                    <a style="color: #ff6e1f"
+                                        class="w-full h-full text-black! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                        href="../suggestion page/suggestion.html"
+                                        >انتقادات و پیشنهادات</a
+                                    >
+                                </li>
+                                <li class="group/li">
+                                    <a
+                                        class="w-full h-full text-black! hover:text-[#FF6E1F]! flex justify-start items-center text-[12px]! mr-5! duration-500 group-hover/li:text-[#FF6E1F]!"
+                                        href="../rules page/rules.html"
+                                        >قوانین و مقررات</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="h-full w-50 hidden lg:flex justify-end items-center">
+                        <div
+                            class="flex flex-wrap w-42.5 h-12.5 *:h-full *:w-1/3 *:flex *:justify-center *:items-center px-2!"
+                        >
+                            <div>
+                                <a
+                                    class="shopping-basket-btn w-full h-full flex justify-center items-center relative"
+                                    href=""
+                                >
+                                    <i class="ri-shopping-cart-2-line text-[22px] text-white"></i>
+                                    <span
+                                        class="bought-quantity w-4 h-4 rounded-full bg-[#FF6E1F] text-white text-[12px] absolute top-2 left-2 flex justify-center items-center"
+                                        >0</span
+                                    >
+                                </a>
+                            </div>
+                            <div>
+                                <a class="w-full h-full flex justify-center items-center" href="">
+                                    <i class="ri-heart-line text-[22px] text-white"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="w-full h-full flex justify-center items-center" href="login page/login.html">
+                                    <i class="ri-user-3-line text-[22px] text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- header -->
+
+            <!-- toggle menu for mobile and tablet -->
+            <div class="cover hidden w-full h-full bg-[rgba(0,0,0,0.64)] fixed top-0 left-0 z-11 lg:hidden!"></div>
+            <div
+                class="aside-menu h-full w-95 bg-[#212121] fixed right-[-110%] top-0 z-12 flex flex-wrap *:w-full *:flex duration-700 delay-300 lg:hidden opacity-0"
+            >
+                <div class="h-[15%] justify-center items-center">
+                    <div class="w-[70%] h-full flex items-center justify-end">
+                        <a class="h-[80%] w-53 flex justify-center items-center" href="../index.html">
+                            <img class="h-full mr-12!" src="src/img/Lamiz-logo.webp" alt="" />
+                        </a>
+                    </div>
+                    <div class="close-aside-menu h-full w-[30%] flex justify-end items-start">
+                        <i class="ri-close-line text-[#FF6E1F] text-[36px] ml-5! mt-1! cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="h-[75%]">
+                    <ul
+                        class="w-full h-auto *:w-[93%] *:flex *:items-center **:text-[14px] pt-5! pr-5! *:hover:text-[#FF6E1F]"
+                    >
+                        <li class="group h-10"><a class="text-white group-hover:text-[#FF6E1F]! duration-400" href="../branches page/branches.html">شعبه‌های قهوه لمیز</a></li>
+                        <li class="group h-10">
+                            <a class="text-white group-hover:text-[#FF6E1F]! duration-400" href="../menu page/menu.html">منو قهوه لمیز</a>
+                        </li>
+                        <li class="contact-li h-10 group">
+                            <a class="contact-text text-white group-hover:text-[#FF6E1F]! duration-400" href=""
+                                >تماس با ما</a
+                            >
+                            <span class="mr-1!"><i class="ri-arrow-down-s-fill text-white"></i></span>
+                        </li>
+
+                        <ul
+                            style="max-height: 0"
+                            data-status="close"
+                            class="contact-submenu w-full overflow-hidden flex flex-wrap *:h-10 *:w-full *:flex *:items-center *:pr-3! duration-300"
+                        >
+                            <li class="group/li">
+                                <a class="text-[#FF6E1F] duration-400" href="#"
+                                    >ارتباط با ما</a
+                                >
+                            </li>
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../about page/about.html">درباره ما</a>
+                            </li>
+                        </ul>
+
+                        <li class="others-li h-10 group">
+                            <a class="others-text text-white group-hover:text-[#FF6E1F]! duration-400" href="">سایر</a>
+                            <span class="mr-1!"><i class="ri-arrow-down-s-fill text-white"></i></span>
+                        </li>
+
+                        <ul
+                            style="max-height: 0"
+                            data-status="close"
+                            class="others-submenu w-full overflow-hidden flex flex-wrap *:h-10 *:w-full *:flex *:items-center *:pr-3! duration-300"
+                        >
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../suggestion page/suggestion.html"
+                                    >انتقادات و پیشنهادات</a
+                                >
+                            </li>
+                            <li class="group/li">
+                                <a class="text-white group-hover/li:text-[#FF6E1F] duration-400" href="../rules page/rules.html"
+                                    >قوانین و مقررات</a
+                                >
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="h-[10%] flex items-center justify-end">
+                    <div class="w-37.5 h-10 ml-15! flex">
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="shopping-basket-btn w-full h-full flex items-center justify-center" href="">
+                                <i class="ri-shopping-bag-fill text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="h-full w-full flex items-center justify-center" href="">
+                                <i class="ri-heart-line text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                        <div class="h-full w-1/3 flex justify-center items-center">
+                            <a class="h-full w-full flex items-center justify-center" href="login page/login.html">
+                                <i class="ri-user-line text-[#FF6E1F] text-[24px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- toggle menu for mobile and tablet -->
+
+            <!-- menu mobile -->
+            <div class="w-full h-[8vh] fixed right-0 bottom-0 z-10 flex justify-center items-center lg:hidden bg-white">
+                <ul
+                    class="w-full h-full flex justify-center items-center *:h-full *:w-1/5 *:flex *:justify-center *:items-center"
+                >
+                    <li class="">
+                        <a class="w-full h-full flex justify-center items-center" href="../index.html">
+                            <i
+                                class="ri-home-2-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"
+                            ></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="w-full h-full flex justify-center items-center" href="../branches page/branches.html">
+                            <i class="ri-bank-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="w-full h-full flex justify-center items-center" href="../menu page/menu.html">
+                            <i
+                                class="ri-store-2-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"
+                            ></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="shopping-basket-btn w-full h-full flex justify-center items-center relative" href="">
+                            <i
+                                class="ri-shopping-bag-line w-full h-full flex justify-center items-center text-[25px] text-[#333333] hover:text-[#33333399] duration-200"
+                            >
+                                <span
+                                    class="bought-quantity w-4 h-4 rounded-full bg-[#FF6E1F] text-white text-[9px] absolute top-[20%] left-[calc(50%-20px)] flex justify-center items-center"
+                                    >0</span
+                                >
+                            </i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="w-full h-full flex justify-center items-center" href="../login page/login.html">
+                            <i
+                                class="ri-user-3-line text-[25px] text-[#333333] hover:text-[#33333399] duration-200"
+                            ></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- menu mobile -->
+
+            <!-- shopping basket -->
+            <div
+                class="cover-basket hidden w-full h-full fixed top-0 left-0 z-14 bg-[rgba(0,0,0,0.64)] backdrop-blur-xs"
+            ></div>
+            <div class="shopping-basket h-full w-75 lg:w-85 fixed top-0 left-[-110%] z-15 bg-white duration-300">
+            <div class="w-full h-17 border-b border-b-[rgba(0,0,0,0.105)] flex justify-center items-center">
+
+                <div class="w-70 lg:w-75 h-7 flex items-center justify-center gap-x-3">
+
+                    <p class="h-full w-52 lg:w-55 text-[18px] text-[#242424] font-bold">سبد خرید</p>
+
+                    <div class="close-basket-btn h-full w-18 lg:w-20 flex items-center justify-center cursor-pointer">
+                        <div class="flex items-center justify-center">
+                            <i class="ri-close-line text-[#767676] text-[24px] flex items-center justify-center"></i>
+                        </div>
+                        <p class="h-full text-[#767676] text-[14px] flex items-center justify-center">بستن</p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="cart-section w-full h-[calc(100%-68px)] overflow-y-scroll">
+                
+            </div>
+
+        </div>
+            <!-- shopping basket -->
+
+            <!-- section -->
+            <main class="page-bg w-full bg-[#F0F0F0] pb-12 lg:pb-20">
+                <!-- hero -->
+                <section
+                    style="
+                        width: 100%;
+                        position: relative;
+                        background-image: url('src/img/about-us-background.webp');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 300px;
+                        z-index: 0 !important;
+                    "
+                >
+                    <!-- سایه مشکی روی عکس -->
+                    <div
+                        style="
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(
+                                to left,
+                                rgba(0, 0, 0, 0.7) 0%,
+                                rgba(0, 0, 0, 0.45) 50%,
+                                rgba(0, 0, 0, 0.55) 100%
+                            );
+                        "
+                    ></div>
+                    <!-- محتوا -->
+                    <div
+                        style="
+                            position: relative;
+                            z-index: 0 !important;
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                        "
+                    >
+                        <div
+                            style="
+                                width: 100%;
+                                max-width: 1152px;
+                                margin: 0 auto;
+                                padding: 0 2rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            "
+                        >
+                            <!-- عنوان سمت راست -->
+                            <h1
+                                style="
+                                    color: #fff;
+                                    font-size: clamp(28px, 4vw, 56px);
+                                    font-weight: 700;
+                                    letter-spacing: -0.5px;
+                                    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+                                    margin: 0;
+                                "
+                            >
+                                ارتباط با ما
+                            </h1>
+                            <!-- دکمه‌های شبکه اجتماعی - سمت چپ -->
+                            <div style="display: flex; flex-direction: column; gap: 10px; align-items: center">
+                                <a
+                                    href="https://www.linkedin.com/company/lamizcoffee/?viewAsMember=true"
+                                    target="_blank"
+                                    style="
+                                        width: 36px;
+                                        height: 36px;
+                                        border-radius: 50%;
+                                        background: #ff6e1f;
+                                        color: #fff;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-decoration: none;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                                        transition: background 0.2s;
+                                    "
+                                    onmouseover="
+                                        this.style.background = '#fff';
+                                        this.querySelector('i').style.color = '#FF6E1F';
+                                    "
+                                    onmouseout="
+                                        this.style.background = '#FF6E1F';
+                                        this.querySelector('i').style.color = '#fff';
+                                    "
+                                >
+                                    <i class="ri-linkedin-fill" style="font-size: 16px; color: #fff"></i>
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/lamizcoffee"
+                                    target="_blank"
+                                    style="
+                                        width: 36px;
+                                        height: 36px;
+                                        border-radius: 50%;
+                                        background: #ff6e1f;
+                                        color: #fff;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-decoration: none;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                                        transition: background 0.2s;
+                                    "
+                                    onmouseover="
+                                        this.style.background = '#fff';
+                                        this.querySelector('i').style.color = '#FF6E1F';
+                                    "
+                                    onmouseout="
+                                        this.style.background = '#FF6E1F';
+                                        this.querySelector('i').style.color = '#fff';
+                                    "
+                                >
+                                    <i class="ri-instagram-line" style="font-size: 16px; color: #fff"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- content -->
+                <section class="w-full">
+                    <div
+                        class="max-w-6xl mx-auto px-4 lg:px-8 mt-10 lg:mt-14"
+                        style="
+                            max-width: 1152px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            margin-top: 2.5rem;
+                        "
+                    >
+                        <!-- form and info grid -->
+                        <div
+                            class="contact-grid grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-16 mb-12 items-center"
+                            style="direction: ltr"
+                        >
+                            <!-- form -->
+                            <div 
+                            class="form-wrapper" dir="rtl" style="min-width: 0; overflow: hidden"
+                            style = "padding-bottom: 1rem;"
+                            >
+                                <h2 
+                                class="text-[20px] lg:text-[24px] font-bold text-[#222] mb-6"
+                                style="padding-bottom: 1rem;"
+                                >
+                                    آیا قهوه لمیز نمایندگی اعطاء می‌کند؟
+                                </h2>
+                                <p 
+                                class="text-[13px] lg:text-[14px] text-[#5c5c5c] leading-8 mb-10"
+                                style="
+                                padding-top: 1rem;
+                                padding-bottom: 2rem;    
+                                "
+                                >
+                                    خیر، قهوه لمیز اعطای نمایندگی (شعبه)، تابلو، حق امتیاز را ندارد. تمامی شعبه‌های
+                                    تهران و سایر استان‌ها انحصاراً متعلق به موسس و مدیرعامل برند قهوه لمیز است و همکاری
+                                    در این زمینه با اشخاص حقیقی و حقوقی نداریم.
+                                </p>
+
+                                <form class="space-y-4">
+                                    <div>
+                                        <label class="block text-[13px] font-semibold text-[#222] mb-2"
+                                        style="padding-top: 1rem; padding-bottom: 0.7rem;"
+                                            >نام و نام خانوادگی <span class="text-[#FF6E1F]">*</span></label
+                                        >
+                                        <input
+                                            type="text"
+                                            placeholder="نام و نام خانوادگی"
+                                            class="w-full h-11 rounded-sm border border-[#ddd] bg-white px-4 text-[13px] outline-none focus:border-[#FF6E1F] transition"
+                                            style="padding-right: 0.5rem;"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-[13px] font-semibold text-[#222] mb-2"
+                                        style="padding-top: 1rem; padding-bottom: 0.7rem;"
+                                            >آدرس ایمیل <span class="text-[#FF6E1F]">*</span></label
+                                        >
+                                        <input
+                                            type="email"
+                                            placeholder="آدرس ایمیل"
+                                            class="w-full h-11 rounded-sm border border-[#ddd] bg-white px-4 text-[13px] outline-none focus:border-[#FF6E1F] transition"
+                                            style="padding-right: 0.5rem;"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-[13px] font-semibold text-[#222] mb-2"
+                                        style="padding-top: 1rem; padding-bottom: 0.7rem;"
+                                            >شماره موبایل <span class="text-[#FF6E1F]">*</span></label
+                                        >
+                                        <input
+                                            type="text"
+                                            placeholder="شماره تماس"
+                                            class="w-full h-11 rounded-sm border border-[#ddd] bg-white px-4 text-[13px] outline-none focus:border-[#FF6E1F] transition"
+                                            style="padding-right: 0.5rem;"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-[13px] font-semibold text-[#222] mb-2"
+                                        style="padding-top: 1rem; padding-bottom: 0.7rem;"
+                                            >پیام شما <span class="text-[#FF6E1F]">*</span></label
+                                        >
+                                        <textarea
+                                            rows="5"
+                                            class="w-full rounded-sm border border-[#ddd] bg-white p-3 text-[13px] outline-none focus:border-[#FF6E1F] transition resize-y"
+                                        ></textarea>
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <button
+                                            type="submit"
+                                            class="h-10 px-8 bg-[#FF6E1F] text-white text-[13px] font-bold rounded-[3px] hover:bg-[#e96011] transition"
+                                            style="padding-right: 0.5rem; padding-left: 0.5rem;"
+                                        >
+                                            ارسال فرم تماس با ما
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- info -->
+                            <div class="info-wrapper" dir="rtl" style="min-width: 0">
+                                <div class="info-stack flex flex-col items-center gap-5">
+                                    <img
+                                        class="mug-img w-32 lg:w-40 h-auto"
+                                        src="src/img/MUG-GO-GREEN-SOON-LAMIZ.webp"
+                                        alt="لامیز"
+                                    />
+                                    <div class="text-center max-w-sm">
+                                        <h3 class="text-[14px] lg:text-[15px] font-bold text-[#222] leading-8 mb-5">
+                                            ما همیشه مشتاق شنیدن نظرات و پیشنهادات شما در راستای ارائه بهترین سرویس و
+                                            خدمات هستیم.
+                                        </h3>
+                                        <p class="text-[13px] lg:text-[13px] text-[#666] leading-7 mb-7"
+                                        style="padding-bottom: 1rem; padding-top: 1rem;"
+                                        >
+                                            
+                                            برای ارسال پیشنهادات و نظرات‌تان لطفا فرم را تکمیل کنید تا کارشناسان ما بعد
+                                            از بررسی با شما ارتباط بگیرند.
+                                        </p>
+
+                                        <a
+                                            href=""
+                                            class="inline-flex items-center justify-center h-10 p-5! bg-[#FF6E1F] text-white text-[13px] font-bold rounded-[3px] hover:bg-[#e96011] transition"
+                                            
+
+                                        >
+                                            انتقادات و پیشنهادات
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- contact details -->
+                        <div
+                            class="contact-details-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-12 border-t border-t-[#e0e0e0]"
+                        >
+                            <div class="contact-item flex flex-col items-center text-center">
+                                <i class="ri-time-line text-[30px] text-[#8B6F47] mb-3"></i>
+                                <h3 class="font-bold text-[#8B6F47] mb-2 text-[14px]">ساعت کاری دفتر مرکزی</h3>
+                                <p class="text-[12px] text-[#666] leading-6">
+                                    از شنبه تا چهارشنبه ۸:۰۰ صبح الی ۱۲:۲۵ عصر
+                                </p>
+                            </div>
+
+                            <div class="contact-item flex flex-col items-center text-center">
+                                <i class="ri-mail-line text-[30px] text-[#8B6F47] mb-3"></i>
+                                <h3 class="font-bold text-[#8B6F47] mb-2 text-[14px]">پست الکترونیک</h3>
+                                <p class="text-[12px] text-[#666] leading-6">info@LamizCoffee.com</p>
+                            </div>
+
+                            <div class="contact-item flex flex-col items-center text-center">
+                                <i class="ri-phone-line text-[30px] text-[#8B6F47] mb-3"></i>
+                                <h3 class="font-bold text-[#8B6F47] mb-2 text-[14px]">تلفن تماس</h3>
+                                <p class="text-[12px] text-[#666] leading-6">۰۲۱۵۴۴۲۹۰۰۰</p>
+                            </div>
+
+                            <div class="contact-item flex flex-col items-center text-center">
+                                <i class="ri-map-pin-line text-[30px] text-[#8B6F47] mb-3"></i>
+                                <h3 class="font-bold text-[#8B6F47] mb-2 text-[14px]">آدرس</h3>
+                                <p class="text-[12px] text-[#666] leading-6">
+                                    شهرک صنعتی نظرآباد، بلوار دکتر حسابی،<br />خیابان افرا، گروه صنعتی زال ایرانیان پلاک
+                                    41G
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- partners -->
+                        <div class="partners-section py-12 text-center border-t border-t-[#e0e0e0]">
+                            <h2 class="text-[19px] lg:text-[20px] font-bold text-[#222] mb-10">
+                                لیست همکاران قهوه لمیز
+                            </h2>
+                            <div class="partners-grid flex flex-wrap justify-center items-center gap-10 lg:gap-16">
+                                <img
+                                    class="partner-logo h-11 lg:h-12 object-contain"
+                                    src="src/img/cafetto-150x150.webp"
+                                    alt="cafetto"
+                                />
+                                <img
+                                    class="partner-logo h-11 lg:h-12 object-contain"
+                                    src="src/img/animo-150x150.webp"
+                                    alt="animo"
+                                />
+                                <img
+                                    class="partner-logo h-11 lg:h-12 object-contain"
+                                    src="src/img/puly-150x150.webp"
+                                    alt="puly"
+                                />
+                                <img
+                                    class="partner-logo h-11 lg:h-12 object-contain"
+                                    src="src/img/monin-150x150.webp"
+                                    alt="monin"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- section -->
+            <!-- footer -->
+            <div class="w-full h-145 md:h-78 flex flex-wrap justify-center xl:gap-x-12 bg-black mb-15! lg:mb-0!">
+                <!-- logo -->
+                <div
+                    class="w-full h-[18%] md:h-4/5 md:w-1/4 max-w-63.5 flex justify-center items-center lg:items-start lg:pt-7!"
+                >
+                    <a class="h-20" href="../index.html">
+                        <img class="w-full h-full" src="src/img/Lamiz-logo.webp" alt="" />
+                    </a>
+                </div>
+                <!-- logo -->
+
+                <!-- ul -->
+                <div class="w-full h-[36%] md:h-4/5 md:w-2/4 max-w-127 flex *:pt-5! md:pt-0!">
+                    <div class="h-full w-1/2">
+                        <div
+                            class="w-full h-1/5 flex justify-center lg:justify-start items-center text-[16px] font-bold text-white lg:mb-3!"
+                        >
+                            دسترسی سریع
+                        </div>
+                        <div class="w-full h-4/5">
+                            <ul class="w-full h-auto *:w-[60%] *:h-7 pr-3! *:pr-5! lg:*:pr-0! lg:pr-0!">
+                                <li class="hover:bg-gray-600 lg:hover:bg-black duration-200">
+                                    <a
+                                        class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300"
+                                        href="../menu page/menu.html"
+                                        >منو قهوه لمیز</a
+                                    >
+                                </li>
+                                <li class="hover:bg-gray-600 lg:hover:bg-black duration-200">
+                                    <a
+                                        class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300"
+                                        href="../branches page/branches.html"
+                                        >شعبه‌های قهوه لمیز</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="h-full w-1/2">
+                        <div
+                            class="w-full h-1/5 flex justify-center lg:justify-start items-center text-[16px] font-bold text-white lg:mb-3!"
+                        >
+                            منوی قهوه لمیز
+                        </div>
+                        <div class="w-full h-4/5">
+                            <ul class="w-full h-auto *:w-[60%] *:h-7 pr-3! *:pr-5! lg:*:pr-0! lg:pr-0!">
+                                <li class="hover:bg-gray-600 lg:hover:bg-black duration-200">
+                                    <a
+                                        class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300"
+                                        href="../about page/about.html"
+                                        >درباره ما</a
+                                    >
+                                </li>
+                                <li class="hover:bg-gray-600 bg-gray-600 lg:hover:bg-black lg:bg-black duration-200">
+                                    <a
+                                        class="w-full h-full text-[10px] lg:text-[12px] text-white lg:text-[#FF6E1F] duration-300"
+                                        href="#"
+                                        >ارتباط با ما</a
+                                    >
+                                </li>
+                                <li class="hover:bg-gray-600 lg:hover:bg-black duration-200">
+                                    <a
+                                        class="w-full h-full text-[10px] lg:text-[12px] text-white lg:hover:text-[#FF6E1F] duration-300"
+                                        href="../rules page/rules.html"
+                                        >قوانین و مقررات</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ul -->
+
+                <!-- permission -->
+                <div class="w-full h-[36%] md:h-4/6 md:w-1/4 max-w-63.5 md:mt-5! pb-2!">
+                    <div class="w-full h-[20%] flex justify-center items-center font-bold text-white text-[14px]">
+                        مجوزهای قهوه لمیز
+                    </div>
+
+                    <div class="w-full h-[60%] flex justify-center items-center">
+                        <img class="w-20 cursor-pointer" src="src/img/logo.png" alt="" />
+                    </div>
+
+                    <div
+                        class="w-full h-[20%] flex justify-center items-center gap-x-1 *:border *:border-white *:rounded-full"
+                    >
+                        <div class="w-6 h-6 flex justify-center items-center">
+                            <i
+                                class="ri-instagram-line h-full w-full flex justify-center items-center text-[14px] text-white"
+                            ></i>
+                        </div>
+
+                        <div class="w-6 h-6 flex justify-center items-center">
+                            <i
+                                class="ri-linkedin-box-fill h-full w-full flex justify-center items-center text-[14px] text-white"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- permission -->
+
+                <!-- rights -->
+                <div
+                    class="w-full h-[10%] md:h-1/5 flex justify-center items-center text-[12px] text-white border-t border-t-gray-500"
+                >
+                    طراحی شده با 🧡 توسط یاسین ترک زبان
+                </div>
+                <!-- rights -->
+            </div>
+            <!-- footer -->
+
+            <!-- circle to go to top of page -->
+            <div class="go-to-start w-10 h-10 lg:w-13 lg:h-13 flex justify-center items-center rounded-full bg-[#FFFFFFE6] fixed top-[85%] lg:top-[90%] left-[-210%] z-100 duration-400 transition-all ease-in-out opacity-0">
+                <a class="w-full h-full flex justify-center items-center" href="#">
+                    <i class="ri-arrow-up-s-line text-[26px] lg:text-[30px] text-gray-700 hover:text-gray-500 duration-200"></i>
+                </a>
+            </div>
+            <!-- circle to go to top of page -->
+        </div>
+    </body>
+</html>
+<script src="../src/js/master.js"></script>
