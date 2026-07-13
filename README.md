@@ -49,6 +49,7 @@ The project was developed with a strong focus on creating an intuitive user expe
 ## 📷 Screenshots
 
 - 👁‍🗨 [Demo Project](https://yasintorkzaban.github.io/Lamiz-Cafe/)
+
 ![viewfinal](https://github.com/user-attachments/assets/29507144-5146-47fe-bae5-163cfc009674)
 ![viewfinal](https://github.com/user-attachments/assets/f8aaaf53-7ddb-4235-a0bb-f76619294876)
 ![viewfinal](https://github.com/user-attachments/assets/83a7cd55-2988-4fb8-a676-e5835361ec81)
